@@ -1,7 +1,7 @@
 class Api::V1::ItemsController < ApplicationController
     before_action :find_item, only: [:show, :update, :destroy]
 
-    # GET /items
+    #GET /items
     def index
         items = Item.all
         render json: items
@@ -24,7 +24,16 @@ class Api::V1::ItemsController < ApplicationController
 
     #PATCH 
     def update
-        
+        if item.update(item_params)
+            render json: item 
+        else
+            render json: {errors: item.errors.full_messages}
+        end
+    end
+
+    #DELETE
+    def delete
+        item.destroy
     end
 
     private
