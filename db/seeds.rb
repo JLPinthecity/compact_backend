@@ -308,12 +308,12 @@ category_id: 4
 )
 
 
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
+bandaids = Item.create(name: 'Welly assorted flex bandages',
 notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
+url: 'https://www.getwelly.com/products/assorted-flex-fabric-bandages-solid-orange',
+weight: 0.8,
 quantity: 1,
-price: 41.99,
+price: 7.99,
 purchase: false,
 sent_home: false,
 user_id: 1,
@@ -321,27 +321,26 @@ category_id: 7
 )
 
 
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
-notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
+afterbite = Item.create(name: 'After Bite Outdoor Insect Bite Treatment',
+notes: 'Powerful gel formula with antihistamine.',
+url: 'https://www.rei.com/product/118807/after-bite-outdoor-insect-bite-treatment',
+weight: 0.5,
 quantity: 1,
-price: 41.99,
+price: 5.00,
 purchase: false,
 sent_home: false,
 user_id: 1,
 category_id: 7
 )
 
-
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
-notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
-quantity: 1,
-price: 41.99,
-purchase: false,
-sent_home: false,
-user_id: 1,
-category_id: 7
+sunscreen = Item.create(name: 'Thinksport Safe Sunscreen SPF 50+ (3oz)',
+    notes: 'Lightweight phone charger',
+    url: 'https://gothink.com/products/thinksport-safe-sunscreen-spf-50-3oz-52',
+    weight: 6,
+    quantity: 1,
+    price: 12.99,
+    purchase: false,
+    sent_home: false,
+    user_id: 1,
+    category_id: 9
 )
