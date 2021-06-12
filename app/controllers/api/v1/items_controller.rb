@@ -4,14 +4,14 @@ class Api::V1::ItemsController < ApplicationController
     #GET /items
     def index
         items = Item.all
-        render json: items
+        render json: ItemSerializer.new(items)
     end
 
     #POST /items
     def create
         item = Item.new(item_params)
         if item.Save
-            render json: item
+            render json: ItemSerializer.new(item)
         else
             render json: {errors: item.errors.full_messages}
         end
@@ -19,13 +19,13 @@ class Api::V1::ItemsController < ApplicationController
 
     # SHOW /items/:id
     def show
-        render json: item
+        render json: ItemSerializer.new(@item)
     end
 
-    #PATCH 
+    #PATCH/UPDATE
     def update
-        if item.update(item_params)
-            render json: item 
+        if @item.update(item_params)
+            render ItemSerializer.new(@item)
         else
             render json: {errors: item.errors.full_messages}
         end
@@ -33,13 +33,13 @@ class Api::V1::ItemsController < ApplicationController
 
     #DELETE
     def delete
-        item.destroy
+        @item.destroy
     end
 
     private
 
     def find_item
-        item = Item.find(params[:id])
+        @item = Item.find(params[:id])
     end
 
     def item_params
