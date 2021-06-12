@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.delete_all
+Category.delete_all
+Item.delete_all
 
 user1 = User.create(name: 'Default User', email: 'defaultuser@gmail.com')
 user2 = User.create(name: 'Test User', email: 'testuser@gmail.com')
@@ -26,10 +29,10 @@ backpack = Item.create(name: 'Hyperlite Mountain Gear 3400 SOUTHWEST',
     weight: 31.68,
     quantity: 1,
     price: 355.00,
-    purchase: true,
+    purchased: true,
     sent_home: false,
-    user_id: 1,
-    category_id: 1
+    user_id: user1.id,
+    category_id: pack.id
     )
 tent = Item.create(name: 'TarpTent StratoSpire 2',
     notes: 'Save weight and use your trekking poles for setup.',
@@ -37,10 +40,10 @@ tent = Item.create(name: 'TarpTent StratoSpire 2',
     weight: 25,
     quantity: 1,
     price: 494.00,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: pack.id
     )
 
 quilt = Item.create(name: 'UGQ Outdoor BANDIT Quilt',
@@ -49,21 +52,22 @@ quilt = Item.create(name: 'UGQ Outdoor BANDIT Quilt',
     weight: 22.33,
     quantity: 1,
     price: 239.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: shelter.id
+    )
 
-sleeppad = Item.create(name: 'Sea To Summit Comfort Plus Insulated Sleep Mat',
+sleep_pad = Item.create(name: 'Sea To Summit Comfort Plus Insulated Sleep Mat',
     notes: 'R-Value of 4 is warm enough for all but the coldest ground.',
     url: 'https://seatosummitusa.com/products/comfort-plus-insulated-mat',
     weight: 29.8,
     quantity: 1,
     price: 199.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: shelter.id
     )
 
 pillow = Item.create(name: 'Sea To Summit AEROS™ Ultralight Pillow',
@@ -72,10 +76,10 @@ pillow = Item.create(name: 'Sea To Summit AEROS™ Ultralight Pillow',
     weight: 2.1,
     quantity: 1,
     price: 39.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: shelter.id
     )
 
 sleeping_bag_liner = Item.create(name: 'Sea To Summit Premium Silk Travel Liner',
@@ -84,10 +88,10 @@ sleeping_bag_liner = Item.create(name: 'Sea To Summit Premium Silk Travel Liner'
     weight: 6,
     quantity: 1,
     price: 89.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: shelter.id
     )
 
 tent_liner = Item.create(name: 'Tarptent Tyvek Groundsheet',
@@ -96,10 +100,10 @@ tent_liner = Item.create(name: 'Tarptent Tyvek Groundsheet',
     weight: 2.1,
     quantity: 1,
     price: 39.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 2
+    user_id: user1.id,
+    category_id: shelter.id
     )
 
 fannypack = Item.create(name: 'Waymark Zipp Pack',
@@ -108,10 +112,10 @@ fannypack = Item.create(name: 'Waymark Zipp Pack',
     weight: 2.4,
     quantity: 1,
     price: 39.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 1
+    user_id: user1.id,
+    category_id: pack.id
     )
 
 wallet = Item.create(name: 'Chums Surfshorts Wallet',
@@ -120,10 +124,10 @@ wallet = Item.create(name: 'Chums Surfshorts Wallet',
     weight: 2,
     quantity: 1,
     price: 11.99,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 9
+    user_id: user1.id,
+    category_id: personal.id
 )
 
 knife = Item.create(name: 'Spyderco Delica 4',
@@ -132,10 +136,10 @@ knife = Item.create(name: 'Spyderco Delica 4',
     weight: 2.5,
     quantity: 1,
     price: 84.00,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 3
+    user_id: user1.id,
+    category_id: survival.id
 )
 
 repair_tape = Item.create(name: 'Gear Aid Tenacious Tape Repair Tape',
@@ -144,10 +148,10 @@ repair_tape = Item.create(name: 'Gear Aid Tenacious Tape Repair Tape',
     weight: 0.6,
     quantity: 1,
     price: 4.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 3
+    user_id: user1.id,
+    category_id: survival.id
 )
 
 water_filter = Item.create(name: 'Sawyer Squeeze Filter',
@@ -156,10 +160,10 @@ water_filter = Item.create(name: 'Sawyer Squeeze Filter',
     weight: 3,
     quantity: 1,
     price: 36.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 3
+    user_id: user1.id,
+    category_id: survival.id
 )
 
 pot = Item.create(name: 'TOAKS Titanium 750ml Pot',
@@ -168,10 +172,10 @@ pot = Item.create(name: 'TOAKS Titanium 750ml Pot',
     weight: 3.6,
     quantity: 1,
     price: 34.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 5
+    user_id: user1.id,
+    category_id: kitchen.id
 )
 
 stove = Item.create(name: 'BRS 3000T Stove Backpacking Stove Camping Stove Ultralight',
@@ -180,10 +184,10 @@ stove = Item.create(name: 'BRS 3000T Stove Backpacking Stove Camping Stove Ultra
     weight: 0.96,
     quantity: 1,
     price: 16.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 5
+    user_id: user1.id,
+    category_id: kitchen.id
 )
 
 cloth = Item.create(name: 'Sfee Microfiber towel',
@@ -192,10 +196,10 @@ cloth = Item.create(name: 'Sfee Microfiber towel',
     weight: 12.8,
     quantity: 1,
     price: 8.99,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 5
+    user_id: user1.id,
+    category_id: kitchen.id
 )
 
 drybag = Item.create(name: 'DIDDY BAG (DRY BAG)',
@@ -204,10 +208,10 @@ drybag = Item.create(name: 'DIDDY BAG (DRY BAG)',
     weight: 0.6,
     quantity: 1,
     price: 20.00,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 5
+    user_id: user1.id,
+    category_id: kitchen.id
     )
 
 battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
@@ -216,10 +220,10 @@ battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20
     weight: 12.1,
     quantity: 1,
     price: 41.99,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 7
+    user_id: user1.id,
+    category_id: electronics.id
     )
 
 garmin = Item.create(name: 'Garmin inReach Explorer®+',
@@ -228,10 +232,10 @@ garmin = Item.create(name: 'Garmin inReach Explorer®+',
     weight: 7.5,
     quantity: 1,
     price: 449.99,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 3
+    user_id: user1.id,
+    category_id: survival.id
 )
 
 headlamp = Item.create(name: 'Black Diamond Spot Headlamp',
@@ -240,10 +244,10 @@ headlamp = Item.create(name: 'Black Diamond Spot Headlamp',
     weight: 3.53,
     quantity: 1,
     price: 39.95,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 3
+    user_id: user1.id,
+    category_id: survival.id
 )
 
 trowel = Item.create(name: 'TheTentLab The Deuce #2 UL Backcountry Trowel',
@@ -252,10 +256,10 @@ url: 'https://www.rei.com/product/131611/thetentlab-the-deuce-2-ul-backcountry-t
 weight: 0.6 ,
 quantity: 1,
 price: 19.95,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 6
+user_id: user1.id,
+category_id: hygiene.id
 )
 
 rag = Item.create(name: 'Kula Cloth Reusable Antimicrobial Pee Cloth',
@@ -264,10 +268,10 @@ url: 'https://www.rei.com/product/182956/kula-cloth-reusable-antimicrobial-pee-c
 weight: 0.4,
 quantity: 1,
 price: 20.00,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 3
+user_id: user1.id,
+category_id: hygiene.id
 )
 
 rain_jacket = Item.create(name: 'Arcteryx Zeta SL Rain Jacket',
@@ -276,10 +280,10 @@ url: 'https://www.rei.com/product/135481/arcteryx-zeta-sl-rain-jacket-womens',
 weight: 9.5,
 quantity: 1,
 price: 299.00,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 4
+user_id: user1.id,
+category_id: clothing.id
 )
 
 
@@ -289,10 +293,10 @@ url: 'https://www.patagonia.com/product/womens-micro-puff-jacket/84070.html',
 weight: 7.3,
 quantity: 1,
 price: 249.00,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 4
+user_id: user1.id,
+category_id: clothing.id
 )
 
 shirt = Item.create(name: 'Patagonia Tropic Comfort Hooded Shirt',
@@ -301,12 +305,11 @@ url: 'https://www.backcountry.com/patagonia-tropic-comfort-hooded-shirt-womens?a
 weight: 6.3,
 quantity: 1,
 price: 69.00,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 4
+user_id: user1.id,
+category_id: clothing.id
 )
-
 
 bandaids = Item.create(name: 'Welly assorted flex bandages',
 notes: 'Lightweight phone charger',
@@ -314,10 +317,10 @@ url: 'https://www.getwelly.com/products/assorted-flex-fabric-bandages-solid-oran
 weight: 0.8,
 quantity: 1,
 price: 7.99,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 7
+user_id: user1.id,
+category_id: clothing.id
 )
 
 
@@ -327,10 +330,10 @@ url: 'https://www.rei.com/product/118807/after-bite-outdoor-insect-bite-treatmen
 weight: 0.5,
 quantity: 1,
 price: 5.00,
-purchase: false,
+purchased: false,
 sent_home: false,
-user_id: 1,
-category_id: 7
+user_id: user1.id,
+category_id: firstaid.id
 )
 
 sunscreen = Item.create(name: 'Thinksport Safe Sunscreen SPF 50+ (3oz)',
@@ -339,8 +342,8 @@ sunscreen = Item.create(name: 'Thinksport Safe Sunscreen SPF 50+ (3oz)',
     weight: 6,
     quantity: 1,
     price: 12.99,
-    purchase: false,
+    purchased: false,
     sent_home: false,
-    user_id: 1,
-    category_id: 9
+    user_id: user1.id,
+    category_id: personal.id
 )
