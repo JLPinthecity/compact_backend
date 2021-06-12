@@ -270,43 +270,41 @@ user_id: 1,
 category_id: 3
 )
 
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
-notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
+rain_jacket = Item.create(name: 'Arcteryx Zeta SL Rain Jacket',
+notes: 'Lightweight and easy to pack.',
+url: 'https://www.rei.com/product/135481/arcteryx-zeta-sl-rain-jacket-womens',
+weight: 9.5,
 quantity: 1,
-price: 41.99,
+price: 299.00,
 purchase: false,
 sent_home: false,
 user_id: 1,
-category_id: 7
+category_id: 4
 )
 
 
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
-notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
+puffy = Item.create(name: 'Patagonia Womens Micro Puff® Jacket',
+notes: 'Ultralightweight',
+url: 'https://www.patagonia.com/product/womens-micro-puff-jacket/84070.html',
+weight: 7.3,
 quantity: 1,
-price: 41.99,
+price: 249.00,
 purchase: false,
 sent_home: false,
 user_id: 1,
-category_id: 7
+category_id: 4
 )
 
-
-
-battery_pack = Item.create(name: 'Anker Portable Charger, PowerCore Essential 20000mAh',
-notes: 'Lightweight phone charger',
-url: 'https://www.amazon.com/Anker-PowerCore-Technology-High-Capacity-Compatible/dp/B07S829LBX?ref_=ast_sto_dp&th=1&psc=1',
-weight: 12.1,
+shirt = Item.create(name: 'Patagonia Tropic Comfort Hooded Shirt',
+notes: 'Ultralight sun hoodie for protection and comfort on hot days.',
+url: 'https://www.backcountry.com/patagonia-tropic-comfort-hooded-shirt-womens?avad=234409_f22437185&utm_medium=Affiliate&utm_source=www.treelinereview.com&utm_campaign=ale&utm_term=content',
+weight: 6.3,
 quantity: 1,
-price: 41.99,
+price: 69.00,
 purchase: false,
 sent_home: false,
 user_id: 1,
-category_id: 7
+category_id: 4
 )
 
 
