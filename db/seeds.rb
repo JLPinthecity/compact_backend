@@ -9,3 +9,15 @@
 
 user1 = User.create(name: 'Default User', email: 'defaultuser@gmail.com')
 user2 = User.create(name: 'Test User', email: 'testuser@gmail.com')
+
+pack = Category.create(name: 'Pack')
+shelter = Category.create(name: 'Sleep equipment/nighttime routine')
+survival = Category.create(name: 'Survival equipment')
+clothing = Category.create(name: 'Clothing')
+kitchen = Category.create(name: 'Kitchen')
+hygiene = Category.create(name: 'Hygiene and bathroom toiletries')
+electronics = Category.create(name: 'Electronics and batteries')
+
+
+
+
