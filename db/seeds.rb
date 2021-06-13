@@ -10,8 +10,8 @@ User.delete_all
 Category.delete_all
 Item.delete_all
 
-user1 = User.create(name: 'Default User', email: 'defaultuser@gmail.com')
-user2 = User.create(name: 'Test User', email: 'testuser@gmail.com')
+user1 = User.create(name: 'Default User', email: 'defaultuser@gmail.com', password: 'defaultuser')
+user2 = User.create(name: 'Test User', email: 'testuser@gmail.com', password: 'testuser')
 
 pack = Category.create(name: 'Pack')
 shelter = Category.create(name: 'Sleep equipment/nighttime routine')
