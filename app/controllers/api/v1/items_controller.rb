@@ -13,7 +13,7 @@ class Api::V1::ItemsController < ApplicationController
         if item.Save
             render json: ItemSerializer.new(item)
         else
-            render json: {errors: item.errors.full_messages}
+            render json: {errors: item.errors.full_messages}, status: :unprocessable_entity
         end
     end
 
@@ -27,7 +27,7 @@ class Api::V1::ItemsController < ApplicationController
         if @item.update(item_params)
             render ItemSerializer.new(@item)
         else
-            render json: {errors: item.errors.full_messages}
+            render json: {errors: item.errors.full_messages}, status: :unprocessable_entity
         end
     end
 
