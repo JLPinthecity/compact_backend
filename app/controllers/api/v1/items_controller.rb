@@ -3,9 +3,15 @@ class Api::V1::ItemsController < ApplicationController
 
     #GET /items
     def index
-        items = Item.all
-        render json: ItemSerializer.new(items)
+        if logged_in? 
+            items = current_user.items
+            render json: ItemSerializer.new(items)
+        else render json: {
+            error: "You must be logged in to see items."
+        }
+        end
     end
+    #we want to show the current_user's items
 
     #POST /items
     def create
