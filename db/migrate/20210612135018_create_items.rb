@@ -4,9 +4,10 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :name
       t.text :notes
       t.string :url
+      t.string :image
       t.decimal :weight, precision: 15, scale: 10
       t.integer :quantity
-      t.integer :price, precision: 5, scale: 2
+      t.decimal :price, precision: 5, scale: 2
       t.boolean :purchased, :default => false
       t.boolean :sent_home, :default => false
 
