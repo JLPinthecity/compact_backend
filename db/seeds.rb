@@ -21,6 +21,7 @@ hygiene = Category.create(name: 'Hygiene and bathroom toiletries', user_id: user
 electronics = Category.create(name: 'Electronics and batteries', user_id: user1.id)
 firstaid = Category.create(name: 'First Aid', user_id: user1.id)
 personal = Category.create(name: 'Personal items', user_id: user1.id)
+shoes = Category.create(name: 'Shoes', user_id: user1.id)
 
 backpack = Item.create(name: 'Hyperlite Mountain Gear 3400 SOUTHWEST',
     notes: 'Flexible pack for volume changes throughout the trail.',
