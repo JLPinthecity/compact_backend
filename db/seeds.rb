@@ -11,17 +11,16 @@ Category.delete_all
 Item.delete_all
 
 user1 = User.create(name: 'Default', email: 'defaultuser@gmail.com', password: 'defaultuser')
-user2 = User.create(name: 'Test', email: 'testuser@gmail.com', password: 'testuser')
 
-pack = Category.create(name: 'Pack')
-shelter = Category.create(name: 'Sleep equipment/nighttime routine')
-survival = Category.create(name: 'Survival equipment')
-clothing = Category.create(name: 'Clothing')
-kitchen = Category.create(name: 'Kitchen and food storage')
-hygiene = Category.create(name: 'Hygiene and bathroom toiletries')
-electronics = Category.create(name: 'Electronics and batteries')
-firstaid = Category.create(name: 'First Aid')
-personal = Category.create(name: 'Personal items')
+pack = Category.create(name: 'Pack', user_id: user1.id)
+shelter = Category.create(name: 'Sleep equipment/nighttime routine', user_id: user1.id)
+survival = Category.create(name: 'Survival equipment', user_id: user1.id)
+clothing = Category.create(name: 'Clothing', user_id: user1.id)
+kitchen = Category.create(name: 'Kitchen and food storage', user_id: user1.id)
+hygiene = Category.create(name: 'Hygiene and bathroom toiletries', user_id: user1.id)
+electronics = Category.create(name: 'Electronics and batteries', user_id: user1.id)
+firstaid = Category.create(name: 'First Aid', user_id: user1.id)
+personal = Category.create(name: 'Personal items', user_id: user1.id)
 
 backpack = Item.create(name: 'Hyperlite Mountain Gear 3400 SOUTHWEST',
     notes: 'Flexible pack for volume changes throughout the trail.',
