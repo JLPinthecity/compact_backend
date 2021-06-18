@@ -16,8 +16,7 @@ class Api::V1::ItemsController < ApplicationController
     #POST /items
     def create
         item = Item.new(item_params)
-        byebug
-        if item.Save
+        if item.save
             render json: ItemSerializer.new(item)
         else
             render json: {errors: item.errors.full_messages}, status: :unprocessable_entity
@@ -50,6 +49,6 @@ class Api::V1::ItemsController < ApplicationController
     end
 
     def item_params
-        params.require(:item).permit(:name, :notes, :url, :weight, :quantity, :price, :purchased, :sent_home, :user_id, :category_id)
+        params.require(:item).permit(:name, :notes, :url, :image, :weight, :quantity, :price, :purchased, :sent_home, :user_id, :category_id)
     end
 end
