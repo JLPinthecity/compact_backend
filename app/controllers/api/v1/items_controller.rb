@@ -30,6 +30,7 @@ class Api::V1::ItemsController < ApplicationController
 
     #PATCH/UPDATE
     def update
+        byebug
         if @item.update(item_params)
             render ItemSerializer.new(@item)
         else
@@ -49,6 +50,6 @@ class Api::V1::ItemsController < ApplicationController
     end
 
     def item_params
-        params.require(:item).permit(:name, :notes, :url, :image, :weight, :quantity, :price, :purchased, :sent_home, :user_id, :category_id)
+        params.require(:item).permit(:name, :notes, :url, :image, :weight, :quantity, :price, :purchased, :sent_home, :user_id, :category_id, :id)
     end
 end
