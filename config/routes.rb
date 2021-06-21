@@ -7,10 +7,10 @@ Rails.application.routes.draw do
 
   namespace :api do 
     namespace :v1 do 
-      resources :items
-      resources :sessions
-      resources :users
-      resources :categories 
+      resources :items, except: [:new, :edit]
+      resources :sessions, only: :create
+      resources :users, only: :create
+      resources :categories, only: :index
     end
   end
 
