@@ -30,9 +30,8 @@ class Api::V1::ItemsController < ApplicationController
 
     #PATCH/UPDATE
     def update
-        byebug
         if @item.update(item_params)
-            render ItemSerializer.new(@item)
+            render json: ItemSerializer.new(@item)
         else
             render json: {errors: item.errors.full_messages}, status: :unprocessable_entity
         end
