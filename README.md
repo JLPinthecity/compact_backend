@@ -1,6 +1,6 @@
 # Compact
 
-Compact is a gear list tracker built for backpackers and long-distance hikers. It's a tool that can be used to track a pack's overall weight and items that need to be purchased/acquired secondhand for a trek. This is the project's Rails API backend. You can find the front-end repo [here].(https://github.com/JLPinthecity/compact_frontend)
+Compact is a gear list tracker built for backpackers and long-distance hikers. It's a tool that can be used to track a pack's overall weight and items that need to be purchased/acquired secondhand for a trek. This is the project's Rails API backend. You can find the front-end repo [here](https://github.com/JLPinthecity/compact_backend).
 
 ## Installation
 
