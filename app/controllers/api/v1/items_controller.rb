@@ -38,11 +38,13 @@ class Api::V1::ItemsController < ApplicationController
     end
 
     #DELETE
-    def delete
+    def destroy
         if @item.destroy
-            render json: "Item successfully deleted."
+            render json: { data: "Item successfully deleted." }
         else 
-            render json: "Item not found."
+            render json: {
+                error: "You must be logged in to see items."
+            }
         end
     end
 
