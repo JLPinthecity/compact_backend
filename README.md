@@ -4,8 +4,6 @@ Compact is a gear list tracker built for backpackers and long-distance hikers. I
 
 ## Installation
 
-## Installation
-
 1. Navigate to the directory in your terminal where you want to save the files.
 
 2. Git clone this repo and the [Rails API backend](https://github.com/JLPinthecity/compact_backend).

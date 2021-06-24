@@ -39,7 +39,11 @@ class Api::V1::ItemsController < ApplicationController
 
     #DELETE
     def delete
-        @item.destroy
+        if @item.destroy
+            render json: "Item successfully deleted."
+        else 
+            render json: "Item not found."
+        end
     end
 
     private
