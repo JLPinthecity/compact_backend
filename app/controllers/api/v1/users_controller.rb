@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
 
-
     def create
         @user = User.new(user_params)
         if @user.save
@@ -11,11 +10,6 @@ class Api::V1::UsersController < ApplicationController
                 error: "Unable to sign in. Please try again."
             }
         end
-    end
-
-    def test
-        @user = User.new(user_params)
-        byebug
     end
 
     private
